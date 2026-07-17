@@ -1939,17 +1939,13 @@ def launch_app(api_class, tracker=None):
             except Exception: pass
     logging.getLogger("pywebview").addHandler(_WvLog())
 
-    # try edgechromium first, fall back to whatever else is available
+    # try qt first, fall back to whatever else is available
     try:
-        tracker.append_log("Starting pywebview (edgechromium)")
+        tracker.append_log("Starting pywebview (Qt)")
         webview.start(debug=False, gui="qt", private_mode=False)
     except Exception as e:
-        print(f"[Webview] edgechromium failed: {e}")
-        tracker.append_log(f"edgechromium failed: {e}, retrying default...")
-        try: webview.start(debug=False, private_mode=False)
-        except Exception as e2:
-            print(f"[Webview] Default backend also failed: {e2}")
-            tracker.append_log(f"Default backend also failed: {e2}")
+        print(f"[Webview] Qt backend failed: {e}")
+        tracker.append_log(f"Qt backend failed: {e}")
 
     return tracker
 
@@ -2070,13 +2066,15 @@ def main():
                 except Exception: pass
         logging.getLogger("pywebview").addHandler(_WvLog())
 
-        try:
-            webview.start(func=_background_init, debug=False, gui="qt", private_mode=False)
-        except Exception as e:
-            print(f"[Webview] edgechromium failed: {e}")
-            try: webview.start(func=_background_init, debug=False, private_mode=False)
-            except Exception as e2:
-                print(f"[Webview] Default backend also failed: {e2}")
+    try:
+        webview.start(
+            func=_background_init,
+            debug=False,
+            gui="qt",
+            private_mode=False
+        )
+    except Exception as e:
+        print(f"[Webview] Qt backend failed: {e}")
 
         return 0
 

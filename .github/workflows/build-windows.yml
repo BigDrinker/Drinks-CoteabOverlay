@@ -42,13 +42,14 @@ jobs:
         shell: powershell
         run: |
           python -m pip install --upgrade pip
-          pip uninstall -y pythonnet clr-loader pywebview
-          pip install -r requirements.txt
+          python -m pip install -r requirements.txt
           python -c "import sys; print(sys.version)"
-          python -c "import webview; from PySide6 import QtCore; print('Qt webview dependencies OK')"
+          python -c "import webview, qtpy; from PySide6 import QtCore, QtWebEngineWidgets; print('Qt dependencies OK')"
 
       - name: Build Windows application
-        run: pyinstaller --noconfirm --clean CoteabMacro.spec
+        shell: powershell
+        run: |
+          python -m PyInstaller --noconfirm --clean CoteabMacro.spec
 
       - name: Create release ZIP
         shell: powershell
