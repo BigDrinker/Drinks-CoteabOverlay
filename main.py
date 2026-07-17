@@ -2066,16 +2066,12 @@ def main():
                 except Exception: pass
         logging.getLogger("pywebview").addHandler(_WvLog())
 
-    try:
         webview.start(
             func=_background_init,
             debug=False,
             gui="qt",
-            private_mode=False
+            private_mode=False,
         )
-    except Exception as e:
-        print(f"[Webview] Qt backend failed: {e}")
-
         return 0
 
     except KeyboardInterrupt:
