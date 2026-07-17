@@ -45,7 +45,7 @@ jobs:
           pip uninstall -y pythonnet clr-loader pywebview
           pip install -r requirements.txt
           python -c "import sys; print(sys.version)"
-          python -c "import webview, pythonnet, clr_loader; print('webview/pythonnet imports OK')"
+          python -c "import webview; from PySide6 import QtCore; print('Qt webview dependencies OK')"
 
       - name: Build Windows application
         run: pyinstaller --noconfirm --clean CoteabMacro.spec

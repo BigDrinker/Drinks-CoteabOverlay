@@ -1942,7 +1942,7 @@ def launch_app(api_class, tracker=None):
     # try edgechromium first, fall back to whatever else is available
     try:
         tracker.append_log("Starting pywebview (edgechromium)")
-        webview.start(debug=False, gui="edgechromium", private_mode=False)
+        webview.start(debug=False, gui="qt", private_mode=False)
     except Exception as e:
         print(f"[Webview] edgechromium failed: {e}")
         tracker.append_log(f"edgechromium failed: {e}, retrying default...")
@@ -2071,7 +2071,7 @@ def main():
         logging.getLogger("pywebview").addHandler(_WvLog())
 
         try:
-            webview.start(func=_background_init, debug=False, gui="edgechromium", private_mode=False)
+            webview.start(func=_background_init, debug=False, gui="qt", private_mode=False)
         except Exception as e:
             print(f"[Webview] edgechromium failed: {e}")
             try: webview.start(func=_background_init, debug=False, private_mode=False)

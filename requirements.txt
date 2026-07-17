@@ -9,10 +9,9 @@ Pillow==12.1.1
 psutil==7.0.0
 pyautogui==0.9.54
 PyAutoIt==0.6.5
+PySide6==6.8.3
 pygetwindow==0.0.9
 pywebview==5.4
-pythonnet==3.0.5
-clr-loader==0.2.7.post0
 pywin32==307
 Requests==2.33.0
 ttkbootstrap==1.10.1
