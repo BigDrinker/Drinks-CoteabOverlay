@@ -1,0 +1,12 @@
+COTEAB MACRO OVERLAY v2.2.1 — WINDOWS
+
+1. Download the Windows ZIP from the GitHub Releases page.
+2. Right-click the ZIP and choose Extract All.
+3. Open the extracted folder.
+4. Double-click "Coteab Macro.exe".
+
+IMPORTANT
+- Do not run the EXE from inside the ZIP.
+- Keep the entire folder together. Do not move only the EXE.
+- Windows SmartScreen may warn about unsigned community-built software.
+- Microsoft Edge WebView2 is included with normal Windows 10/11 installations. Very old or stripped Windows installations may require WebView2 repair through Windows Update.

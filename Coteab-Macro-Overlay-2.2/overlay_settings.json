@@ -1,0 +1,28 @@
+{
+  "enabled": false,
+  "layout": "expanded",
+  "position": "top-right",
+  "background_transparency": 0.35,
+  "theme": "midnight",
+  "accent": "#aeb8ff",
+  "font": "Inter",
+  "minimum_rarity": 1,
+  "show": {
+    "status": true,
+    "biome": true,
+    "aura": true,
+    "rarity": true,
+    "merchant": true,
+    "merchant_time": true,
+    "time": true,
+    "session": true
+  },
+  "always_on_top": true,
+  "click_through": false,
+  "scrollable": true,
+  "remember_position": true,
+  "x": 120,
+  "y": 120,
+  "width": 380,
+  "height": 300
+}

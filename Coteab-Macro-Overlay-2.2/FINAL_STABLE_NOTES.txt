@@ -1,0 +1,24 @@
+Coteab Native Overlay 2.2 - Stable Final Pass
+
+Included:
+- Stable native per-pixel overlay
+- Background-only transparency with opaque text
+- Rounded transparent corners
+- Move/resize and saved bounds
+- Status, session, biome, aura, rarity, merchant, and merchant timer
+- Profiles, row ordering, compact/expanded layouts
+- Detection notifications and session counters
+- Import/export overlay settings
+- Automatic retention of the five most recent settings backups
+- Compiled-mode overlay launcher
+- One-click windowed EXE build script
+
+Deliberately not included in this stability pass:
+- FPS/ping estimates
+- Audio alerts
+- animated GPU effects
+- global hotkeys
+- potion timers without a verified macro data source
+
+Those features can introduce hooks, timing races, or misleading values and were
+left out of the final stability-focused build.

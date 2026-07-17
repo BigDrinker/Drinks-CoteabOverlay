@@ -1,0 +1,11 @@
+.venv/
+frontend/node_modules/
+build/
+dist/
+release/
+__pycache__/
+*.py[cod]
+*.log
+.env
+.DS_Store
+Thumbs.db
